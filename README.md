@@ -2,7 +2,7 @@
 
 A dummy site for an imaginary restaurant.
 
-## Objective
+## Objectives
 
 - Practice using npm
 - Setup, configure & use webpack
