@@ -1,20 +1,23 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
 	entry: {
 		index: "./src/index.js",
 	},
+	devtool: "inline-source-map",
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: "./src/index.html",
 		}),
+		new MiniCssExtractPlugin({ filename: "main.[contenthash].css" }),
 	],
 	module: {
 		rules: [
 			{
 				test: /\.css$/i,
-				use: ["style-loader", "css-loader"],
+				use: [MiniCssExtractPlugin.loader, "css-loader"],
 			},
 			{
 				test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -27,7 +30,7 @@ module.exports = {
 		],
 	},
 	output: {
-		filename: "main.js",
+		filename: "main.[contenthash].js",
 		path: path.resolve(__dirname, "dist"),
 		clean: true,
 	},
