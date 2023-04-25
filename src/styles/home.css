@@ -1,0 +1,93 @@
+.content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.main-content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	position: relative;
+}
+
+.main-content * {
+	z-index: 5;
+}
+
+.background-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+	object-position: center;
+	filter: brightness(15%);
+
+	z-index: 1;
+}
+
+.intro-container {
+	flex: 1;
+
+	text-align: center;
+	padding-top: 10%;
+
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+}
+
+.intro {
+	font-size: 7rem;
+	text-transform: uppercase;
+}
+
+.greet,
+.airline-intro {
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+
+.btn {
+	padding: 10px 15px;
+	font-size: 1.5rem;
+	font-weight: bold;
+	border-radius: 5px;
+
+	cursor: pointer;
+}
+
+.menu-btn {
+	align-self: center;
+	background-color: #dd0800;
+	color: white;
+}
+
+.menu-btn:hover {
+	opacity: 70%;
+}
+
+.menu-btn:active {
+	opacity: 40%;
+}
+
+.airline-btn {
+	color: #445cb0;
+}
+
+.other-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5rem;
+
+	padding: 2rem;
+	color: white;
+	background-color: #445cb0;
+}
