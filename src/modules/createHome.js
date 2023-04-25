@@ -1,6 +1,6 @@
 import elementFactory from "./elementFactory";
 
-import restaurantImg from "../assets/city-wok.jpg";
+import restaurantImg from "../assets/images/city-wok.jpg";
 
 //CREATES THE HOME PAGE CONTENT AND RETURNS IT
 export default function createHome() {
@@ -52,6 +52,10 @@ export default function createHome() {
 		},
 		{ name: "text", value: "City Menu" }
 	);
+	menuBtn.addEventListener("click", () => {
+		const navMenu = document.querySelector('.nav-btn[data-nav-id="menu"]');
+		navMenu.click();
+	});
 
 	introContainer.append(intro, greet, menuBtn);
 	mainContent.append(mainBackground, introContainer);
