@@ -32,4 +32,4 @@ all the objectives of this practice project were completed.
 
 ### Live Github page
 
-[Site](imaginepog.github.io/restaurant-site)
+[Site](https://imaginepog.github.io/restaurant-site/)
