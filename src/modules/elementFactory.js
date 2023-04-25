@@ -1,4 +1,4 @@
-//Creates element with given parameters
+//CREATES ELEMENT WITH GIVEN ATTRIBUTES AND RETURNS IT
 export default function elementFactory(elementName, ...attributes) {
 	const genericElement = document.createElement(elementName);
 
